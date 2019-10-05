@@ -16,7 +16,7 @@ pipeline {
                 script {
                     app = docker.build("sianliu/train-schedule")
                     app.inside {
-                        sh 'echo $(curl localhost:8080)'            # smoke test image running
+                        sh 'echo $(curl localhost:8080)'            
                     }
                 }
             }
